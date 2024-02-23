@@ -1,0 +1,117 @@
+_________________________________________________________________________________________________________________________________
+#1
+__________________________________________________________________________________________________________________________
+let dogString = "All dogs are good boys. Dogs named Precious can be annoying but are still good. Dogs named Shadow are usually majestic and cool.\
+Sassy is a cat, but Chance is a dog. Can cat people be trusted? I don't know. Also Potato is a great dog name for a lil tiny stubby guy."
+
+let dogNames = ["Fido", "Precious", "Sassy", "Gertrude", "Shadow", "Potato", "Bart"];
+
+// Call the function with the string and the list of dog names
+findDogNames(dogString, dogNames);
+
+
+function findDogNames(dogString, dogNames) {
+    let matchFound = false; // Flag to track if any match is found
+
+    dogNames.forEach(name => {
+        if (dogString.includes(name)) {
+            console.log(`Matched dog_name: ${name}`);
+            matchFound = true;
+
+            // Extra credit: Check if the name is "Sassy"
+            if (name === "Sassy") {
+                console.log("That's a damn cat");
+            }
+        }
+    });
+
+    // If no matches were found, log "No Matches"
+    if (!matchFound) {
+        console.log("No Matches");
+    }
+}
+____________________________________________________________________________________________________________________________
+#2
+______________________________________________________________________________________________________________________
+function replaceEvenIndexWithSignatureMove(arr) {
+    // Mapping of characters to their signature moves
+    const signatureMoves = {
+        Goku: 'Kamehameha',
+        Vegeta: 'Final Flash',
+        Trunks: 'Burning Attack',
+        Krillin: 'Destructo Disc',
+        Gohan: 'Masenko',
+        Piccolo: 'Special Beam Cannon'
+    };
+
+    for (let i = 0; i < arr.length; i++) {
+        // Check if the index is even
+        if (i % 2 === 0) {
+            // Replace the character at the even index with their signature move,
+            // or "even index" if the character is not found in the signatureMoves mapping
+            arr.splice(i, 1, signatureMoves[arr[i]] || "even index");
+        }
+    }
+    return arr;
+}
+
+// Example array
+let characters = ["Goku", "Vegeta", "Trunks", "Krillin", "Gohan", "Piccolo"];
+
+// Call the function and log the result
+console.log(replaceEvenIndexWithSignatureMove(characters));
+_________________________________________________________________________________________________________________
+
+Codewars #1
+______________________________________________________________________________________________________________________________
+
+https://www.codewars.com/kata/551b4501ac0447318f0009cd/train/javascript
+
+Implement a function which convert the given boolean value into its string representation.
+
+Note: Only valid inputs will be given.
+
+function booleanToString(b){
+  //your code here
+}
+
+const Test = require('@codewars/test-compat');
+
+describe("Tests", () => {
+  it("test", () => {
+Test.assertEquals(booleanToString(true), "true", 'When we pass in true, we want the string "true" as output');
+Test.assertEquals(booleanToString(false), "false", 'When we pass in false, we want the string "false" as output');
+  });
+});
+
+ANSWER
+function booleanToString(b){
+  return b.toString();
+}
+
+______________________________________________________________________________________________________________________________
+
+Codewars #2
+___________________________________________________________________________________________________________________________________
+
+https://www.codewars.com/kata/551b4501ac0447318f0009cd/train/javascript
+
+function booleanToString(b){
+  //your code here
+}
+
+const Test = require('@codewars/test-compat');
+
+describe("Tests", () => {
+  it("test", () => {
+Test.assertEquals(booleanToString(true), "true", 'When we pass in true, we want the string "true" as output');
+Test.assertEquals(booleanToString(false), "false", 'When we pass in false, we want the string "false" as output');
+  });
+});
+
+ANSWER
+
+function booleanToString(b){
+  // Convert boolean to string
+  return String(b);
+}
