@@ -153,4 +153,6 @@ img[alt="blue_goku"] {
     bottom: 0;
     width: 20%;
     height: auto;
+    border-radius: 50%;
+    border-color: black;
 }
